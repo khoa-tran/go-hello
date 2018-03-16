@@ -8,14 +8,16 @@ const spanishHelloPrefix = "Hola, "
 const frenchHelloPrefix = "Bonjour, "
 const vietnameseHelloPrefix = "Xin chao, "
 
-func hello(name string, language string) string {
+// Hello says hello to specified name in a language
+func Hello(name string, language string) string {
 	if name == "" {
 		name = "World"
 	}
-	return greetingPrefix(language) + name
+	return GreetingPrefix(language) + name
 }
 
-func greetingPrefix(language string) (prefix string) {
+// GreetingPrefix returns a hello prefix in a language
+func GreetingPrefix(language string) (prefix string) {
 	switch language {
 	case french:
 		prefix = frenchHelloPrefix
